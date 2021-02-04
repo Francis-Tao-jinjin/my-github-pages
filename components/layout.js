@@ -5,15 +5,17 @@ import Link from 'next/link';
 
 const name = 'Francis Tao';
 
-export const siteTitle = 'Francis Next.js Sample Website';
+export const siteTitle = 'Francis Tao-Jinjin Next.js GitHub Pages';
 
 export default function Layout({children, home}) {
+    // return <div className={styles.container}>
+    // return <div className="container mx-auto px-8">
     return <div className={styles.container}>
         <Head>
             <link rel='icon' href='/favicon.ico'/>
             <meta
                 name='description'
-                content='Learn how to build a personal website using Next.js'
+                content='Francis Tao-Jinjin Next.js GitHub Pages'
             />
             <meta
                 property='og:image'
