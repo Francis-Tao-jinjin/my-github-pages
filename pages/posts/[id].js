@@ -7,6 +7,8 @@ import utilStyles from '../../styles/utils.module.css'
 export default function Post({postData}) {
     return <Layout>
         <Head>
+            <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"/>
             <title>{postData.title}</title>
         </Head>
         <article>

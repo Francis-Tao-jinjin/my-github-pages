@@ -48,19 +48,105 @@ code.il {
     font-size: 15px;
 }
 
-.preCodeBlock + pre {
-    background: #ffe38b;
+.markdown ~ pre {
+/* .preCodeBlock ~ pre { */
+    /* background: #ffe38b; */
     padding: 1rem;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
     margin: 8px 0 8px 0;
     font-size: 14px;
     overflow-x: scroll;
     width: 100%;
+    background-color: #f6f8fa;
+    border-radius: 6px;
 
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
 }
 
-.preCodeBlock + pre::-webkit-scrollbar {
+.markdown ~ pre::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
+}
+
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+
+.markdown ~ ul {
+    padding-left: 2.2em;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.markdown ~ ul li::marker {
+    content: "•   ";
+    font-size: 1em;
+}
+
+.markdown ~ ul,
+p {
+    font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.markdown ~ p {
+    margin-bottom: 16px;
+}
+
+p code {
+    font-family: Menlo, Monaco, "Courier New", Courier, monospace;
+    background-color: rgb(255 238 107);
+    font-size: 75%;
+    padding: 2px 4px;
+    font-weight: 400;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.markdown + h1 {
+    margin-top: 0!important;
+}
+
+.markdown ~ p a {
+    color: #0070f3;
+    text-decoration: none;
+}
+
+.markdown ~ p a:hover {
+    text-decoration: underline;
+}
+
+.markdown ~ h1,
+.markdown ~ h2,
+.markdown ~ h3,
+.markdown ~ h4,
+.markdown ~ h5,
+.markdown ~ h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.markdown ~ h1 {
+    font-size: 2em;
+    padding-bottom: .3em;
+    border-bottom: 1px solid #eaecef;
+}
+
+.markdown ~ h2 {
+    font-size: 1.5em;
+    padding-bottom: .3em;
+    border-bottom: 1px solid #eaecef;
+}
+
+.markdown ~ h3 {
+    font-size: 1.25em;
 }

@@ -6,6 +6,8 @@ description: 'An digital audio workstation in your browser. You can create music
 date: '2021-01-08'
 ---
 
+<div class='markdown'></div>
+
 <h1 class="text-3xl font-medium mb-2 mt-3">Introduction About MusicEditor</h1>
 
 From the name, you know it is a tool that can let you create digital music in your browser, it is so cool!

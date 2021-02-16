@@ -44,7 +44,7 @@ export default function Home({allPostsData}) {
                 <Link href={`/posts/${id}`}>
                   <a className='truncate font-medium text-gray-900 text-lg inline-block m-0 w-full'>{title}</a>
                 </Link>
-                <h2 class="font-medium text-sm text-indigo-400 tracking-wide mb-1">{keyword}</h2>
+                <h2 className="font-medium text-sm text-indigo-400 tracking-wide mb-1">{keyword}</h2>
                 <p className='text-justify text-base text-gray-600'>
                   { description }
                 </p>

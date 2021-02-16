@@ -6,6 +6,8 @@ description: 'In order to make VoxelEditor work well on touch screen devices, I 
 date: '2020-12-20'
 ---
 
+<div class='markdown'></div>
+
 <h1 class="text-3xl font-medium mb-2 mt-3">VoxelEditor Mobile Adaption</h1>
 
 VoxelEditor has been out for a quite long time, but there was still one big feature I didn't finish. And that was made it work well on the touch device.
@@ -26,7 +28,7 @@ The white half-transparent circle is the button that the finger can hold and dra
 <img src="/images/ve-mobile/operation-demo.gif" alt="topbar" style="width:500px; margin:auto"/>
 <div class='m-5'></div>
 
-For thoes who prefer use left hand, you can even change the direction of the virtual cursor.
+For those who prefer to use their left hand, you can even change the direction of the virtual cursor.
 
 <div class='m-5'></div>
 <img src="/images/ve-mobile/change-cursor-direction.gif" alt="topbar" style="width:500px; margin:auto"/>
@@ -35,6 +37,8 @@ For thoes who prefer use left hand, you can even change the direction of the vir
 The rest of the adaptation work is basically UI changes, including adapting the small screen, providing a shortcut toolbar and so on.
 
 <div class='m-5'></div>
-<img src="/images/ve-mobile/ui-adaption.gif" alt="topbar" style="width:500px; margin:auto"/>
+<video controls="true" alt="ui adaption" style="width:500px; margin:auto">
+    <source src="/images/ve-mobile/adaption.mp4">
+</video>
 <div class='m-5'></div>
 

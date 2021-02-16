@@ -6,6 +6,8 @@ description: 'This is a tool for uploading and simply processing audio in the bo
 date: '2020-08-10'
 ---
 
+<div class='markdown'></div>
+
 <h1 class="text-3xl font-medium mb-2 mt-3">Audio Adjustment Tool Of Box3 Game Editor</h1>
 
 <div class='m-5'></div>
@@ -15,23 +17,28 @@ date: '2020-08-10'
 This is a tool for uploading and simply processing audio in the box3 game editor. I have written a component specifically for this functionality, which in addition to React, will also involve the WebAudio API and canvas 2d.
 
 <div class='m-5'></div>
+
 The main functions of this component include: playing and pausing audio, cropping audio, and providing convenient UI controls and visual feedback for these functions.
 
 <div class='m-5'></div>
+
 For those who are not familiar with WebAudio API. All you need to know is the 'Audio' we talk about is actually a kind of data buffer that we call <code class='il'>AudioBuffer</code>. Whether it's playing or cropping or even adding sound effects, it's all about the buffer in the end.
 
 <div class='m-5'></div>
-To play an audioBuffer, we need to create an <code class='il'>AudioBufferSourceNode</code>, be noticed, an AudioBufferSourceNode can only be start and stop once. Otherwise, your javascript gonna throw error.
+
+To play an audioBuffer, we need to create an <code class='il'>AudioBufferSourceNode</code>, be noticed, an AudioBufferSourceNode can only be started and stop once. Otherwise, your javascript engine gonna throw an error.
 
 <div class='m-5'></div>
+
 Now we clear that we need to implement a class to handle all the operations to the audioBuffer and a React component to handle UI interaction.
 
 <div class='m-5'></div>
-We can call that  class 'AudioPlayer', it need to support basic <code class='il'>play</code> and <code class='il'>stop</code>, beside, user may want to start playback from any position of the audio, and the selected interval should support loop playback.
+
+We can call that  class 'AudioPlayer', it needs to support basic <code class='il'>play</code> and <code class='il'>stop</code>, besides, the user may want to start playback from any position of the audio, and the selected interval should support loop playback.
 
 <div class='preCodeBlock'></div>
 
-```javascript
+```TypeScript
 class AudioPlayer {
     private _state = 'stopped';
     private _offset = 0;
@@ -85,13 +92,13 @@ class AudioPlayer {
 }
 ```
 
-The start method receive two optional param, <code class='il'>startTime</code> refer to the global time of 'AudioContex', if you want to start at the time you call the method, just pass  <code class='il'>audioContext.currentTime</code> to it. <code class='il'>offset</code> refer to the duration of the audio. If an audio is 1.5s long and you wang to start playback from the 0.5s, then the <code class='il'>offset</code> is 0.5 .
+The start method receives two optional params, <code class='il'>startTime</code> refer to the global time of 'AudioContex', if you want to start at the time you call the method, just pass  <code class='il'>audioContext.currentTime</code> to it. <code class='il'>offset</code> refers to the duration of the audio. If an audio is 1.5s long and you want to start playback from the 0.5s, then the <code class='il'>offset</code> is 0.5 .
 
 Here is how I implement the <code class='il'>start</code> and <code class='il'>stop</code>method:
 
 <div class='preCodeBlock'></div>
 
-```javascript
+```TypeScript
 public start(startTime?:number, offset?:number) {
     if (startTime === undefined) {
         startTime = this.now();
@@ -147,7 +154,7 @@ Drawing the waveform of audiobuffer is fairly easy. You don't need to install an
 
 <div class='preCodeBlock'></div>
 
-```javascript
+```TypeScript
 function computeWaveForm(container:HTMLDivElement, buffer:AudioBuffer) {
     const peaks:number[] = [];
     const chann0 = (buffer.getChannelData(0) as ArrayBuffer);
