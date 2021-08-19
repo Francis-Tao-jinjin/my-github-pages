@@ -2,6 +2,14 @@
     max-width: 60rem;
     padding: 0 1rem;
     margin: 3rem auto 6rem;
+    position: relative;
+    z-index: 2;
+    /* backdrop-filter: blur(10px);
+    background: #dadada9e; */
+
+    backdrop-filter: blur(2px);
+    background: #ffffff78;
+
 }
 
 .header {

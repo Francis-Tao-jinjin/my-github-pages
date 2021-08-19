@@ -64,6 +64,7 @@ export default function Layout({children, home}) {
             </Link>
             </div>
         )}
+        <canvas></canvas>
     </div>;
 }
 

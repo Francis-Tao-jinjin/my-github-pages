@@ -26,7 +26,7 @@ export default function Home({allPostsData}) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Hi, I'm Francis Tao. I'm a software engineer, Mainly focus on front-end development and webgl, You can explore my GitHub for more infomation</p>
+        <p>Hi, I'm Francis Tao. I'm a software engineer, Mainly focus on front-end development and webgl, You can explore my <a href="https://github.com/Francis-Tao-jinjin/">GitHub</a> for more infomation</p>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         {/* <ul className={utilStyles.list}> */}
         {/* <div className="lg:flex items-center container mx-auto my-auto"> */}

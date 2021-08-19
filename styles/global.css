@@ -9,7 +9,14 @@ body {
 }
 
 html {
-    background: #f0ece1a1 !important;
+    /* background: #f0ece1a1 !important; */
+}
+
+#glcanvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
 }
 
 * {
