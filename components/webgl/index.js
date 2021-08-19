@@ -178,7 +178,16 @@ function setupWeatherData() {
             rainChance:0.35,
             dropletsRate:50,
             raining:true,
-            // trailRate:2.5,
+            fg:textureRainFg,
+            bg:textureRainBg
+        }),
+        drizzle: weather({
+            minR:10,
+            maxR:40,
+            rainChance:0.15,
+            rainLimit:2,
+            dropletsRate:10,
+            dropletsSize:[3.5,6],
             fg:textureRainFg,
             bg:textureRainBg
         }),
@@ -186,7 +195,7 @@ function setupWeatherData() {
 }
 
 function updateWeather() {
-    curWeatherData = weatherData.rain;
+    curWeatherData = weatherData.drizzle;
     raindrops.options = {
         ...raindrops.options,
         ...curWeatherData,

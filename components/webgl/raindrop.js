@@ -242,6 +242,7 @@ export class Raindrops {
 
         if (this.options.raining) {
             this.dropletsCounter += this.options.dropletsRate * timeScale * this.areaMultiplier;
+            
             times(this.dropletsCounter,(i)=>{
                 this.dropletsCounter--;
                 this.drawDroplet(
@@ -286,9 +287,9 @@ export class Raindrops {
     
             // update trails
             if(this.options.raining){
-              drop.lastSpawn+=drop.momentum*timeScale*this.options.trailRate;
-              if(drop.lastSpawn>drop.nextSpawn){
-                let trailDrop=this.createDrop({
+              drop.lastSpawn += drop.momentum * timeScale * this.options.trailRate;
+              if(drop.lastSpawn > drop.nextSpawn){
+                let trailDrop = this.createDrop({
                   x:drop.x+(random(-drop.r,drop.r)*0.1),
                   y:drop.y-(drop.r*0.01),
                   r:drop.r*random(...this.options.trailScaleRange),
@@ -407,10 +408,5 @@ export class Raindrops {
         this.droplets.width = this.width * this.dropletsPixelDensity;
         this.droplets.height = this.height * this.dropletsPixelDensity;
         this.renderDropsGfx();
-
-        // this.canvas = createCanvas(this.width, this.height);
-        // this.ctx = this.canvas.getContext('2d');
-        // this.droplets = createCanvas(this.width*this.dropletsPixelDensity,this.height*this.dropletsPixelDensity);
-        // this.dropletsCtx = this.droplets.getContext('2d');
     }
 }
